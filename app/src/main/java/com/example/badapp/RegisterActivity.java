@@ -176,7 +176,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 userReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {
-                                        Log.d("REGISTER", "Success: A new PATIENT account is created for ID " + userID);
+                                        Log.d("REGISTER", "Success: A new PATIENT account is created for ID " + fAuth.getCurrentUser().getEmail());
                                     }
                                 });
                                 Toast.makeText(RegisterActivity.this,"User registered successfully", Toast.LENGTH_SHORT).show();
@@ -186,7 +186,15 @@ public class RegisterActivity extends AppCompatActivity {
                                 finish();
                             }
                             else if (role.equals("Doctor")){
+                                DocumentReference userReference = fStore.collection("users").document(fAuth.getCurrentUser().getEmail());
                                 Doctor doctor = new Doctor(fullName,email,birthdate,phone,password,gender,role);
+                                Users user = new Users(fullName,email,birthdate,phone,password,gender,role);
+                                userReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void unused) {
+                                        Log.d("REGISTER", "Success: A new PATIENT account is created for ID " + userID);
+                                    }
+                                });
                                 Intent intent = new Intent(getApplicationContext(), AddDoctorInformationActivity.class);
                                 intent.putExtra("doctor",doctor);
                                 startActivity(intent);
