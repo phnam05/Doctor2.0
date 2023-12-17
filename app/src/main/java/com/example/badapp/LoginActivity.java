@@ -111,11 +111,11 @@ public class LoginActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 DocumentSnapshot document = task.getResult();
                                 if (document.exists()) {
-                                     if (document.getString("Role").equals("Patient")||document.getString("role").equals("patient")){
+                                     if (document.getString("role").equals("Patient")){
                                         startActivity(new Intent(LoginActivity.this,PatientHomeActivity.class));
                                         Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                                     }
-                                    else if (document.getString("role").equals("doctor") || document.getString("role").equals("Doctor")){
+                                    else if (document.getString("role").equals("Doctor") ){
                                         startActivity(new Intent(LoginActivity.this,DoctorHomeActivity.class));
                                         Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                                     }

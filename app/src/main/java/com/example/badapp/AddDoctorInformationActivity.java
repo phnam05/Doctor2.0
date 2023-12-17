@@ -56,7 +56,7 @@ public class AddDoctorInformationActivity extends AppCompatActivity {
                 doctorReference.set(doctor).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Log.d("REGISTER", "Success: A new PATIENT account is created for ID");
+                        Log.d("REGISTER", "Success: A new Doctor account is created for ID");
                     }
                 });
                 progressBar.setVisibility(View.GONE);

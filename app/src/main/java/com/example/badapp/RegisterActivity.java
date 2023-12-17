@@ -198,7 +198,6 @@ public class RegisterActivity extends AppCompatActivity {
                                 Intent intent = new Intent(getApplicationContext(), AddDoctorInformationActivity.class);
                                 intent.putExtra("doctor",doctor);
                                 startActivity(intent);
-                                finish();
                             }
 
                         }
