@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10sp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15sp"
+        android:background="@drawable/card_border"
+        >
+
+        <TextView
+            android:id="@+id/tvPatientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="Patient name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tvAppointmentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20/12/2023"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/tvAppointmentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8:00 - 8:30"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/tvAppointmentType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Online"
+            android:fontFamily="@font/montserrat"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tvNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note: Please be gentle"
+            android:fontFamily="@font/montserrat"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MakingAppointment2">
+    tools:context=".ViewAppointmentActivity">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -13,7 +13,6 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-
             android:layout_height="match_parent"
             android:background="#FFFFFF"
             android:orientation="vertical"
@@ -31,26 +30,11 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
-            <RelativeLayout
-                android:layout_width="353dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/card_border"
-                android:padding="16dp">
-
-                <TextView
-                    android:id="@+id/tvAppointmentInfo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/rounded_button"
-                    android:drawablePadding="8dp"
-                    android:fontFamily="@font/montserrat"
-                    android:padding="8dp"
-                    android:text="Patient name\n15 Jan 2023, 09:00am - 12:00am\nOnline\nNote: Please be gentle"
-                    android:textSize="16sp" />
-
-            </RelativeLayout>
-
-
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_appointments"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="16sp"
+                android:layout_height="wrap_content" />
             <Button
                 android:id="@+id/btnHome"
                 android:layout_width="220dp"

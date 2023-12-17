@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/card_border"
         android:orientation="vertical"
-        android:padding="5sp">
+        android:padding="15sp">
 
         <ImageView
             android:id="@+id/doctor_image"

@@ -6,7 +6,11 @@ public class Appointment implements Serializable {
     private String patientName, patientEmail, appointmentDate, appointmentType, note, time, appointmentID;
     private Doctor doctor;
 
-    public Appointment(String patientName,  String appointmentDate, String appointmentType, String note, String time, String appointmentID) {
+    public Appointment(){
+
+    }
+
+{}    public Appointment(String patientName,  String appointmentDate, String appointmentType, String note, String time, String appointmentID) {
         this.patientName = patientName;
         this.appointmentDate = appointmentDate;
         this.appointmentType = appointmentType;
