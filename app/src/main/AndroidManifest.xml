@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BadApp"
         tools:targetApi="31">
         <activity
+            android:name=".ConfirmAppointmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".SetAppointment2"
             android:exported="false" />
         <activity

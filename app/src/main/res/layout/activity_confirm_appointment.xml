@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:background = "@drawable/confirmation_screen"
+    android:gravity="center_horizontal"
+    tools:context=".ConfirmAppointmentActivity">
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/montserrat"
+    android:text="APPOINTMENT"
+    android:textAlignment="center"
+    android:textColor="#2C87FF"
+    android:textSize="30sp"
+    android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16sp"
+        android:fontFamily="@font/montserrat"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Appointment request submitted!" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/card_border"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvAppointmentInfo"
+            android:layout_width="match_parent"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/rounded_button"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/montserrat"
+            android:padding="8dp"
+            android:text="Patient name\n15 Jan 2023, 09:00am - 12:00am\nOnline\nNote: Please be gentle" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/montserrat"
+        android:textSize="16sp"
+        android:gravity="center"
+
+        android:text="Please wait for doctor's confirmation to set up the appointment!\n
+Thank you for booking appointments with us" />
+
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200sp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#2C87FF"
+        android:fontFamily="@font/montserrat"
+        android:text="Back to Home" />
+
+</LinearLayout>

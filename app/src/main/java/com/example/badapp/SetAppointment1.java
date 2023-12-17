@@ -80,10 +80,10 @@ public class SetAppointment1 extends AppCompatActivity {
 
                 Appointment appointment = new Appointment(name,email,date,typeAppointment,note,time,id);
                 //appointmentCollection.document(id).set(appointment);
-                Intent intent = new Intent();
+                Intent intent = (new Intent(SetAppointment1.this,SetAppointment2.class));
                 intent.putExtra("appointment",appointment);
                 //startActivity(intent);
-                startActivity(new Intent(SetAppointment1.this,SetAppointment2.class));
+                startActivity(intent);
                                       }
                                   }
         );

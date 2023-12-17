@@ -83,16 +83,4 @@ public class ViewAppointmentActivity extends AppCompatActivity {
                 });
     }
 
-    //        Doctor doctor1 = new Doctor();
-//
-//        // Add appointments to the list
-//        appointments.add(new Appointment("Alice Brown", "alice.brown@email.com", "15 Jan 2023",
-//                "Online", "Please be gentle", "09:00am - 12:00pm",
-//                "ID123", doctor1));
-//        appointments.add(new Appointment("Bob Smith", "bob.smith@email.com", "20 Jan 2023",
-//                "Offline", "Regular check-up", "10:00am - 11:00am",
-//                "ID124", doctor1));
-//        appointments.add(new Appointment("Charlie Davis", "charlie.davis@email.com", "25 Jan 2023",
-//                "Online", "Consultation", "02:00pm - 03:00pm",
-//                "ID125", doctor1));
 }

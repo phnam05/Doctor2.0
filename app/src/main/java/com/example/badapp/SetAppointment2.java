@@ -39,21 +39,28 @@ public class SetAppointment2 extends AppCompatActivity {
     private DoctorsAdapter doctorsAdapter;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference doctorCollection = db.collection("doctors");
+    Appointment appointment;
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_appointment2);
         setAppointmentButton = findViewById(R.id.set_appointment_button);
+        appointment = (Appointment) getIntent().getSerializableExtra("appointment");
         setAppointmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SetAppointment2.this, ConfirmationActivity.class));
+                Intent intent = new Intent(SetAppointment2.this, ConfirmAppointmentActivity.class);
+                intent.putExtra("appointment",appointment);
+                startActivity(intent);
             }
         });
         backPageText = findViewById(R.id.backPageText);
         backPageText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SetAppointment2.this,SetAppointment1.class));
+                Intent intent =new Intent(SetAppointment2.this,SetAppointment1.class);
+               // intent.putExtra("appointment",appointment);
+                startActivity(intent);
             }
         });
         recyclerView = findViewById(R.id.recycler_view_doctors);
