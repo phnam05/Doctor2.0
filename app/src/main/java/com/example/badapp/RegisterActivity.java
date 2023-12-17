@@ -141,6 +141,7 @@ public class RegisterActivity extends AppCompatActivity {
                     progressBar.setVisibility(View.VISIBLE);
                     //Toast.makeText(getApplicationContext(),"Register success",Toast.LENGTH_SHORT).show();
                     registerUser(fullName,email,birthdate,phone,password,gender,role);
+
                 }
             }
         });
@@ -162,10 +163,11 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(RegisterActivity.this,"User registered successfully", Toast.LENGTH_SHORT).show();
+
                             FirebaseUser firebaseUser = fAuth.getCurrentUser();
                             firebaseUser.sendEmailVerification();
                             userID = fAuth.getCurrentUser().getUid();
+
                             //DocumentReference userReference = fStore.collection("users").document(userID);
                             if (role.equals("Patient")){
                                 DocumentReference userReference = fStore.collection("users").document(fAuth.getCurrentUser().getEmail());
@@ -177,29 +179,15 @@ public class RegisterActivity extends AppCompatActivity {
                                         Log.d("REGISTER", "Success: A new PATIENT account is created for ID " + userID);
                                     }
                                 });
+                                Toast.makeText(RegisterActivity.this,"User registered successfully", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                 startActivity(intent);
                             }
                             else if (role.equals("Doctor")){
-                                //DocumentReference doctorReference = fStore.collection("doctors").document(fAuth.getCurrentUser().getEmail());
                                 Doctor doctor = new Doctor(fullName,email,birthdate,phone,password,gender,role);
                                 Intent intent = new Intent(getApplicationContext(), AddDoctorInformationActivity.class);
-                                DocumentReference doctorReference = fStore.collection("doctors").document(fAuth.getCurrentUser().getEmail());
-                                doctorReference.set(doctor).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void unused) {
-                                        Log.d("REGISTER", "Success: A new PATIENT account is created for ID");
-                                    }
-                                });
-
                                 intent.putExtra("doctor",doctor);
                                 startActivity(intent);
-//                                doctorReference.set(doctor).addOnSuccessListener(new OnSuccessListener<Void>() {
-//                                    @Override
-//                                    public void onSuccess(Void unused) {
-//                                        Log.d("REGISTER", "Success: A new DOCTOR account is created for ID " + userID);
-//                                    }
-//                                });
                             }
 
                         }

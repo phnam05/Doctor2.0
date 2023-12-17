@@ -2,13 +2,14 @@ package com.example.badapp;
 
 import java.io.Serializable;
 
-public class Doctor extends Users implements Serializable {
+public class Doctor  implements Serializable {
 
     private String doctorID;
     public int resourceID;
     private String specialty;
     private String patientCount;
     private String experienceYears;
+    private String fullname, email, birthdate,phone,password, gender, role;
     private boolean isSelected; // This is for UI state, not a Firestore field
 
     public boolean isSelected() {
@@ -44,9 +45,16 @@ public class Doctor extends Users implements Serializable {
 
     }
 
-    public Doctor(String fullname, String email, String birthdate, String phone,String password, String gender, String role){
-        super(fullname, email, birthdate, phone,password, gender, role);
+    public Doctor(String fullname, String email, String birthdate, String phone, String password, String gender, String role) {
+        this.fullname = fullname;
+        this.email = email;
+        this.birthdate = birthdate;
+        this.phone = phone;
+        this.password = password;
+        this.gender = gender;
+        this.role = role;
     }
+
     public void getSelected(boolean e){
 
     }
@@ -60,6 +68,38 @@ public class Doctor extends Users implements Serializable {
 
     public void setExperienceYears(String experienceYears) {
         this.experienceYears = experienceYears;
+    }
+
+    public String getDoctorID() {
+        return doctorID;
+    }
+
+    public int getResourceID() {
+        return resourceID;
+    }
+
+    public String getName() {
+        return fullname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getBirthdate() {
+        return birthdate;
+    }
+
+    public String getPhoneNumber() {
+        return phone;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public String getRole() {
+        return role;
     }
 
     public void setLocation(String location) {
