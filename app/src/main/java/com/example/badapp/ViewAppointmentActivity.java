@@ -15,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Bundle;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -34,12 +36,16 @@ public class ViewAppointmentActivity extends AppCompatActivity {
     private AppointmentAdapter adapter;
     private List<Appointment> appointmentList;
     FirebaseFirestore db;
+    String currentUserEmail;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_appointment);
+        FirebaseAuth fAuth = FirebaseAuth.getInstance();
+        currentUserEmail = fAuth.getCurrentUser().getEmail();
+        //Toast.makeText(getApplicationContext(), "Email: " + currentUserEmail,Toast.LENGTH_SHORT).show();
         backHomeButton = findViewById(R.id.btnHome);
         backHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,9 +63,14 @@ public class ViewAppointmentActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         eventChangeListener();
     }
+
+//    private void myEventChangeListener(){
+//        db.collection().whereEqualTo("email",currentUserEmail)
+//    }
+
     private void eventChangeListener() {
 
-        db.collection("appointments")
+        db.collection("appointments").whereEqualTo("patientEmail",currentUserEmail)
                 .orderBy("appointmentDate", Query.Direction.ASCENDING)
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
@@ -71,6 +82,7 @@ public class ViewAppointmentActivity extends AppCompatActivity {
                         }
 
                         for (DocumentChange dc : value.getDocumentChanges()) {
+                            //Toast.makeText(getApplicationContext(), "Gotcha",Toast.LENGTH_SHORT).show();
                             if (dc.getType() == DocumentChange.Type.ADDED) {
                                 Appointment appointment = dc.getDocument().toObject(Appointment.class);
                                 appointmentList.add(appointment);

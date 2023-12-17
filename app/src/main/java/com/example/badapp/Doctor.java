@@ -63,6 +63,12 @@ public class Doctor  implements Serializable {
         this.password = password;
         this.gender = gender;
         this.role = role;
+        if (gender.equals("Male")){
+            this.resourceID = R.drawable.male_doctor_icon;
+        }
+        else{
+            this.resourceID = R.drawable.female_doctor_icon;
+        }
     }
 
     public void getSelected(boolean e){

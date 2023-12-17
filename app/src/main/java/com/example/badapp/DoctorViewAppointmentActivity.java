@@ -38,7 +38,7 @@ public class DoctorViewAppointmentActivity extends AppCompatActivity {
         backHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(DoctorViewAppointmentActivity.this, PatientHomeActivity.class));
+                startActivity(new Intent(DoctorViewAppointmentActivity.this, DoctorHomeActivity.class));
             }
         });
         // Initialize the RecyclerView and set its layout manager

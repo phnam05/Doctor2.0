@@ -3,6 +3,7 @@ package com.example.badapp;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -53,6 +54,7 @@ public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.DoctorVi
     public void onBindViewHolder(@NonNull DoctorViewHolder holder, int position) {
         Doctor doctor = doctorsList.get(position);
         holder.bind(doctor, listener);
+        //holder.
     }
 
     // Method to get the count of items
@@ -66,9 +68,11 @@ public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.DoctorVi
     // ViewHolder class for the adapter
     static class DoctorViewHolder extends RecyclerView.ViewHolder {
         TextView doctorName, doctorSpecialty, patientCount, experienceYears, location, phoneNumber, email;
+        ImageView imgView;
 
         DoctorViewHolder(View itemView) {
             super(itemView);
+            imgView = itemView.findViewById(R.id.doctor_image);
             // Bind the views directly to the TextViews, not the LinearLayouts
             doctorName = itemView.findViewById(R.id.doctor_name);
             doctorSpecialty = itemView.findViewById(R.id.doctor_specialty);
@@ -81,6 +85,7 @@ public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.DoctorVi
         }
 
         void bind(final Doctor doctor, final OnDoctorClickListener listener) {
+            imgView.setImageResource(doctor.getResourceID());
             doctorName.setText(doctor.getName());
             doctorSpecialty.setText(doctor.getSpecialty());
             patientCount.setText(String.format(Locale.getDefault(), "%d+ Patients", doctor.getPatientCount()));

@@ -11,12 +11,18 @@ import android.widget.Toast;
 
 public class DoctorHomeActivity extends AppCompatActivity {
     ProgressBar progressBar;
-    Button logoutButton;
+    Button logoutButton, viewAppointmentButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_doctor);
-
+        viewAppointmentButton = findViewById(R.id.btnViewAppointment);
+        viewAppointmentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DoctorHomeActivity.this,DoctorViewAppointmentActivity.class));
+            }
+        });
         logoutButton = findViewById(R.id.btnLogout);
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -31,6 +31,7 @@
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="32sp"
                 android:id="@+id/recycler_view_appointments"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -38,6 +39,7 @@
                 android:id="@+id/btnHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
                 android:layout_margin="16dp"
                 android:backgroundTint="#2C87FF"
                 android:fontFamily="@font/montserrat"

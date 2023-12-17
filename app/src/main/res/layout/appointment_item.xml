@@ -28,22 +28,49 @@
         <TextView
             android:id="@+id/tvAppointmentDate"
             android:layout_width="wrap_content"
+            android:textSize = "16sp"
             android:layout_height="wrap_content"
-            android:text="20/12/2023"
             android:layout_below="@id/tvPatientName"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginStart="48dp"
+
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="8dp"
+            android:text="20/12/2023" />
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:textSize = "16sp"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPatientName"
+
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="8dp"
+            android:text="Date: " />
 
         <TextView
+            android:textSize = "16sp"
             android:id="@+id/tvAppointmentTime"
             android:layout_width="wrap_content"
             android:layout_below="@id/tvAppointmentDate"
             android:layout_height="wrap_content"
             android:text="8:00 - 8:30"
             android:layout_marginTop="4dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="48dp"
+
             android:layout_marginEnd="8dp" />
+        <TextView
+            android:textSize = "16sp"
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_below="@id/tvAppointmentDate"
+            android:layout_height="wrap_content"
+            android:text="Time: "
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_marginEnd="8dp" />
+
 
         <TextView
             android:id="@+id/tvAppointmentType"
@@ -52,11 +79,13 @@
             android:layout_height="wrap_content"
             android:text="Online"
             android:fontFamily="@font/montserrat"
+            android:textSize = "16sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@android:color/black" />
 
         <TextView
             android:id="@+id/tvNote"
+            android:textSize = "16sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvAppointmentType"

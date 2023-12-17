@@ -52,10 +52,13 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
         void bind(Appointment appointment) {
             patientName.setText(appointment.getPatientName());
             String dateTime = appointment.getAppointmentDate() + ", " + appointment.getTime();
+            String datetime = "Date & Time: " + dateTime;
             appointmentDate.setText(dateTime);
-            appointmentType.setText(appointment.getAppointmentType());
-            appointmentNote.setText(appointment.getNote());
-            appointmentTime.setText(appointment.getTime()); // If needed separately
+            String type = "Appointment type: " + appointment.getAppointmentType();
+            appointmentType.setText(type);
+            String note = "Note: " + appointment.getNote();
+            appointmentNote.setText(note);
+            //appointmentTime.setText(note); // If needed separately
         }
     }
 }
