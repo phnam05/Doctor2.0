@@ -181,13 +181,16 @@ public class RegisterActivity extends AppCompatActivity {
                                 });
                                 Toast.makeText(RegisterActivity.this,"User registered successfully", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
+                                finish();
                             }
                             else if (role.equals("Doctor")){
                                 Doctor doctor = new Doctor(fullName,email,birthdate,phone,password,gender,role);
                                 Intent intent = new Intent(getApplicationContext(), AddDoctorInformationActivity.class);
                                 intent.putExtra("doctor",doctor);
                                 startActivity(intent);
+                                finish();
                             }
 
                         }

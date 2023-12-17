@@ -105,8 +105,8 @@ public class MakingAppointment2 extends Fragment {
         });
         recyclerView = view.findViewById(R.id.recycler_view_doctors);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-        //doctorsList = getListDoctor();
-
+        fetchDoctorsFromFirestore();
+        doctorsList = new ArrayList<>();
         // Set up the adapter with the list of doctors
         doctorsAdapter = new DoctorsAdapter(doctorsList, new DoctorsAdapter.OnDoctorClickListener() {
             @Override
@@ -128,7 +128,7 @@ public class MakingAppointment2 extends Fragment {
     }
     private void fetchDoctorsFromFirestore() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("users").whereEqualTo("Role", "Doctor").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+        db.collection("users").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 for (QueryDocumentSnapshot documentSnapshot: queryDocumentSnapshots){
@@ -138,14 +138,15 @@ public class MakingAppointment2 extends Fragment {
                 }
             }
         });}
-//    private List<Doctor> getListDoctor(){
-//        List<Doctor> doctorsList = new ArrayList<>();
-//        doctorsList.add(new Doctor("Dr. Edward", "Dentist", 50, 5, "+0930 235 049", "edward.dr@gmail.com", "Singapore"));
-//        doctorsList.add(new Doctor("Dr. Thanh", "Physician", 30, 10, "+0320 809 202", "drthanh@mail.com", "Ho Chi Minh"));
-//        doctorsList.add(new Doctor("Dr. Anna", "Cardiologist", 20, 5, "+0634 825 837", "annadr@hotmail.com", "Hanoi"));
-//        doctorsList.add(new Doctor("Dr. David", "General", 40, 15, "+0923 284 732", "doctordavid@gmail.com", "China"));
-//        doctorsList.add(new Doctor("Dr. Charlie", "Surgeon", 30, 5, "+0378 826 937", "charliedr@gmail.com", "New York"));
-//        return doctorsList;
-//    }
+
+    private List<Doctor> getListDoctor(){
+        List<Doctor> doctorsList = new ArrayList<>();
+        doctorsList.add(new Doctor("Dr. Edward", "Dentist", 50, 5, "+0930 235 049", "edward.dr@gmail.com", "Singapore"));
+        doctorsList.add(new Doctor("Dr. Thanh", "Physician", 30, 10, "+0320 809 202", "drthanh@mail.com", "Ho Chi Minh"));
+        doctorsList.add(new Doctor("Dr. Anna", "Cardiologist", 20, 5, "+0634 825 837", "annadr@hotmail.com", "Hanoi"));
+        doctorsList.add(new Doctor("Dr. David", "General", 40, 15, "+0923 284 732", "doctordavid@gmail.com", "China"));
+        doctorsList.add(new Doctor("Dr. Charlie", "Surgeon", 30, 5, "+0378 826 937", "charliedr@gmail.com", "New York"));
+        return doctorsList;
+    }
 
 }

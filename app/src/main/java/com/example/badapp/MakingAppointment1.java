@@ -115,13 +115,13 @@ public class MakingAppointment1 extends Fragment {
                 FragmentTransaction ft =  getActivity().getSupportFragmentManager().beginTransaction();
                 ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
 
-                                          MakingAppointment2 make2 = new MakingAppointment2();
-                                          Bundle bundle = new Bundle();
-                                          bundle.putSerializable("appointment", appointment);
-                                          make2.setArguments(bundle);
-                                          ft.replace(android.R.id.content, make2);
-                                          ft.addToBackStack(null);
-                                          ft.commit();
+                MakingAppointment2 make2 = new MakingAppointment2();
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("appointment", appointment);
+                make2.setArguments(bundle);
+                ft.replace(android.R.id.content, make2);
+                ft.addToBackStack(null);
+                ft.commit();
 
 //                ConfirmationActivity confirmationActivity = new ConfirmationActivity();
 //                Bundle bundle = new Bundle();

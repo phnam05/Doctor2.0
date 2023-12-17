@@ -59,10 +59,12 @@ public class AddDoctorInformationActivity extends AppCompatActivity {
                         Log.d("REGISTER", "Success: A new PATIENT account is created for ID");
                     }
                 });
-                Toast.makeText(getApplicationContext(),"User registered successfully", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
+                finish();
+                Toast.makeText(getApplicationContext(),"User registered successfully", Toast.LENGTH_SHORT).show();
+
             }
         });
 
