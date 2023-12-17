@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/background_home">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="320sp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="225dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Welcome Doctor &amp; Nurses. \nWish you a wonderful working day"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnViewAppointment"
+        android:layout_width="231dp"
+        android:layout_height="76dp"
+        android:textSize="16sp"
+        android:layout_marginTop="128dp"
+        android:backgroundTint="#1D6EDA"
+        android:text="VIEW APPOINTMENT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="57dp"
+        android:layout_height="62dp"
+        android:layout_below="@id/btnViewAppointment"
+        android:backgroundTint="#9DADC1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="653dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="29dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="455dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:srcCompat="@drawable/out_logo"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="134dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="318dp"
+        android:src="@drawable/image_18__1_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="212dp"
+
+        android:fontFamily="@font/montserrat"
+        android:text="Home Page"
+        android:textColor="@color/appTheme"
+        android:textSize="28sp"
+
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
