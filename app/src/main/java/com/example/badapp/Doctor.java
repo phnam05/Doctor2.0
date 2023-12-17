@@ -9,7 +9,7 @@ public class Doctor  implements Serializable {
     private String specialty;
     private int patientCount;
     private int experienceYears;
-    private String fullname, email, birthdate,phone,password, gender, role;
+    private String name, email, birthdate,phoneNumber,password, gender, role;
     private boolean isSelected; // This is for UI state, not a Firestore field
 
     public boolean isSelected() {
@@ -45,21 +45,21 @@ public class Doctor  implements Serializable {
 
     }
     public Doctor(String name, String specialty, int patientCount, int experienceYears, String phoneNumber, String email, String location) {
-        this.fullname = name;
+        this.name = name;
         this.specialty = specialty;
         this.patientCount = patientCount;
         this.experienceYears = experienceYears;
-        this.phone = phoneNumber;
+        this.phoneNumber = phoneNumber;
         this.email = email;
         this.location = location;
     }
 
 
     public Doctor(String fullname, String email, String birthdate, String phone, String password, String gender, String role) {
-        this.fullname = fullname;
+        this.name = fullname;
         this.email = email;
         this.birthdate = birthdate;
-        this.phone = phone;
+        this.phoneNumber = phone;
         this.password = password;
         this.gender = gender;
         this.role = role;
@@ -89,7 +89,7 @@ public class Doctor  implements Serializable {
     }
 
     public String getName() {
-        return fullname;
+        return name;
     }
 
     public String getEmail() {
@@ -101,7 +101,7 @@ public class Doctor  implements Serializable {
     }
 
     public String getPhoneNumber() {
-        return phone;
+        return phoneNumber;
     }
 
     public String getGender() {

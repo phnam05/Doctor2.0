@@ -77,8 +77,9 @@ public class SetAppointment1 extends AppCompatActivity {
                 String note = editTextNote.getText().toString();
                 String time = timeSpinner.getSelectedItem().toString();
                 String id = appointmentCollection.document().getId();
+
                 Appointment appointment = new Appointment(name,email,date,typeAppointment,note,time,id);
-                appointmentCollection.document(id).set(appointment);
+                //appointmentCollection.document(id).set(appointment);
                 Intent intent = new Intent();
                 intent.putExtra("appointment",appointment);
                 //startActivity(intent);
