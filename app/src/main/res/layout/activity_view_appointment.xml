@@ -19,8 +19,8 @@
             android:padding="16dp">
 
             <TextView
-                android:layout_width="251dp"
-                android:layout_height="100sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16sp"
 
                 android:fontFamily="@font/montserrat"
@@ -33,14 +33,12 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view_appointments"
                 android:layout_width="match_parent"
-                android:layout_marginBottom="16sp"
                 android:layout_height="wrap_content" />
             <Button
                 android:id="@+id/btnHome"
-                android:layout_width="220dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="360sp"
-                android:layout_marginEnd="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
                 android:backgroundTint="#2C87FF"
                 android:fontFamily="@font/montserrat"
                 android:text="Back to Home" />

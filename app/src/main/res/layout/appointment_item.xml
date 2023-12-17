@@ -2,16 +2,17 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginBottom="10sp"
     >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/card_border"
         android:orientation="vertical"
         android:padding="15sp"
-        android:background="@drawable/card_border"
+
         >
 
         <TextView
@@ -20,6 +21,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:text="Patient name"
+            android:layout_marginTop="16sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
 
@@ -28,13 +30,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20/12/2023"
-            android:layout_marginTop="8dp"
+            android:layout_below="@id/tvPatientName"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp" />
 
         <TextView
             android:id="@+id/tvAppointmentTime"
             android:layout_width="wrap_content"
+            android:layout_below="@id/tvAppointmentDate"
             android:layout_height="wrap_content"
             android:text="8:00 - 8:30"
             android:layout_marginTop="4dp"
@@ -44,6 +48,7 @@
         <TextView
             android:id="@+id/tvAppointmentType"
             android:layout_width="match_parent"
+            android:layout_below="@id/tvAppointmentTime"
             android:layout_height="wrap_content"
             android:text="Online"
             android:fontFamily="@font/montserrat"
@@ -54,12 +59,13 @@
             android:id="@+id/tvNote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tvAppointmentType"
             android:text="Note: Please be gentle"
             android:fontFamily="@font/montserrat"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@android:color/black" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 
