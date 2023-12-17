@@ -177,11 +177,21 @@ public class RegisterActivity extends AppCompatActivity {
                                         Log.d("REGISTER", "Success: A new PATIENT account is created for ID " + userID);
                                     }
                                 });
+                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                startActivity(intent);
                             }
-                            else{
+                            else if (role.equals("Doctor")){
                                 //DocumentReference doctorReference = fStore.collection("doctors").document(fAuth.getCurrentUser().getEmail());
                                 Doctor doctor = new Doctor(fullName,email,birthdate,phone,password,gender,role);
-                                Intent intent = new Intent(RegisterActivity.this, AddDoctorInformationActivity.class);
+                                Intent intent = new Intent(getApplicationContext(), AddDoctorInformationActivity.class);
+                                DocumentReference doctorReference = fStore.collection("doctors").document(fAuth.getCurrentUser().getEmail());
+                                doctorReference.set(doctor).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void unused) {
+                                        Log.d("REGISTER", "Success: A new PATIENT account is created for ID");
+                                    }
+                                });
+
                                 intent.putExtra("doctor",doctor);
                                 startActivity(intent);
 //                                doctorReference.set(doctor).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -191,10 +201,7 @@ public class RegisterActivity extends AppCompatActivity {
 //                                    }
 //                                });
                             }
-                            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
-                            finish();
+
                         }
                         else{
                             try {
