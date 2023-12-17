@@ -35,7 +35,7 @@ public class PatientHomeActivity extends AppCompatActivity {
         setAppointmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PatientHomeActivity.this, AppointmentActivity.class));
+                startActivity(new Intent(PatientHomeActivity.this, SetAppointment1.class));
             }
         });
 

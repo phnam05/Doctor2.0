@@ -46,8 +46,8 @@ public class AddDoctorInformationActivity extends AppCompatActivity {
                 String location = editTextLocation.getText().toString();
 
                 doctor.setSpecialty(specialty);
-                doctor.setExperienceYears(years);
-                doctor.setPatientCount(numPatients);
+                doctor.setExperienceYears(Integer.parseInt(years));
+                doctor.setPatientCount(Integer.parseInt(numPatients));
                 doctor.setLocation(location);
                 setContentView(R.layout.activity_add_doctor_information);
                 FirebaseAuth fAuth = FirebaseAuth.getInstance();

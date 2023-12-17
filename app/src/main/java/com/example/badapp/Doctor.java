@@ -7,8 +7,8 @@ public class Doctor  implements Serializable {
     private String doctorID;
     public int resourceID;
     private String specialty;
-    private String patientCount;
-    private String experienceYears;
+    private int patientCount;
+    private int experienceYears;
     private String fullname, email, birthdate,phone,password, gender, role;
     private boolean isSelected; // This is for UI state, not a Firestore field
 
@@ -26,11 +26,11 @@ public class Doctor  implements Serializable {
     public void setId(String id){
         this.doctorID = id;
     }
-    public String getPatientCount() {
+    public int getPatientCount() {
         return patientCount;
     }
 
-    public String getExperienceYears() {
+    public int getExperienceYears() {
         return experienceYears;
     }
 
@@ -44,15 +44,16 @@ public class Doctor  implements Serializable {
     public Doctor (){
 
     }
-    public Doctor(String name, String specialty, int numPatient, int experienceYears, String phoneNum, String mail, String location) {
+    public Doctor(String name, String specialty, int patientCount, int experienceYears, String phoneNumber, String email, String location) {
         this.fullname = name;
         this.specialty = specialty;
-        this.patientCount = String.valueOf(numPatient);
-        this.experienceYears = String.valueOf(experienceYears);
-        this.phone = phoneNum;
-        this.email = mail;
+        this.patientCount = patientCount;
+        this.experienceYears = experienceYears;
+        this.phone = phoneNumber;
+        this.email = email;
         this.location = location;
     }
+
 
     public Doctor(String fullname, String email, String birthdate, String phone, String password, String gender, String role) {
         this.fullname = fullname;
@@ -71,11 +72,11 @@ public class Doctor  implements Serializable {
         this.specialty = specialty;
     }
 
-    public void setPatientCount(String patientCount) {
+    public void setPatientCount(int patientCount) {
         this.patientCount = patientCount;
     }
 
-    public void setExperienceYears(String experienceYears) {
+    public void setExperienceYears(int experienceYears) {
         this.experienceYears = experienceYears;
     }
 

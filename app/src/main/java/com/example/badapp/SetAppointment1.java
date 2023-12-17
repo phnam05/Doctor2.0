@@ -80,8 +80,9 @@ public class SetAppointment1 extends AppCompatActivity {
                 Appointment appointment = new Appointment(name,email,date,typeAppointment,note,time,id);
                 appointmentCollection.document(id).set(appointment);
                 Intent intent = new Intent();
-                //intent.putExtra("appointment")
-
+                intent.putExtra("appointment",appointment);
+                //startActivity(intent);
+                startActivity(new Intent(SetAppointment1.this,SetAppointment2.class));
                                       }
                                   }
         );
@@ -96,7 +97,7 @@ public class SetAppointment1 extends AppCompatActivity {
 
         // Create a DatePickerDialog and set its OnDateSetListener
         DatePickerDialog datePickerDialog = new DatePickerDialog(
-                getApplicationContext(), // context should be getActivity() when inside a Fragment
+                SetAppointment1.this, // context should be getActivity() when inside a Fragment
                 new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int selectedYear, int selectedMonth, int selectedDay) {
