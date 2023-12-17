@@ -1,5 +1,7 @@
 package com.example.badapp;
 
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 
@@ -105,8 +107,9 @@ public class MakingAppointment2 extends Fragment {
         });
         recyclerView = view.findViewById(R.id.recycler_view_doctors);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-        fetchDoctorsFromFirestore();
+
         doctorsList = new ArrayList<>();
+        fetchDoctorsFromFirestore();
         // Set up the adapter with the list of doctors
         doctorsAdapter = new DoctorsAdapter(doctorsList, new DoctorsAdapter.OnDoctorClickListener() {
             @Override
