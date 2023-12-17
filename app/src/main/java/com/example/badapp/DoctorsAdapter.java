@@ -85,7 +85,12 @@ public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.DoctorVi
         }
 
         void bind(final Doctor doctor, final OnDoctorClickListener listener) {
-            imgView.setImageResource(doctor.getResourceID());
+            if (doctor.getGender().equals("Male")){
+                imgView.setImageResource(R.drawable.male_doctor_icon);
+            }
+            else{
+                imgView.setImageResource(R.drawable.female_doctor_icon);
+            }
             doctorName.setText(doctor.getName());
             doctorSpecialty.setText(doctor.getSpecialty());
             patientCount.setText(String.format(Locale.getDefault(), "%d+ Patients", doctor.getPatientCount()));

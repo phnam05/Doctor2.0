@@ -14,17 +14,18 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:fontFamily="@font/montserrat"
-    android:text="APPOINTMENT CONFIRM"
+    android:text="APPOINTMENT CONFIRMATION"
+        android:layout_marginTop="30sp"
     android:textAlignment="center"
     android:textColor="#2C87FF"
     android:textSize="30sp"
     android:textStyle="bold" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:layout_marginTop="22sp"
+        android:layout_marginTop="30sp"
         android:fontFamily="@font/montserrat"
         android:textStyle="bold"
         android:textSize="18sp"
@@ -32,9 +33,9 @@
         android:text="Appointment request submitted!" />
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop = "15sp"
         android:background="@drawable/card_border"
         android:padding="14dp">
 
@@ -54,12 +55,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop = "200sp"
         android:fontFamily="@font/montserrat"
+        android:textStyle="bold"
         android:textSize="18sp"
         android:gravity="center"
 
-        android:text="Please wait for doctor's confirmation to set up the appointment!\n
+        android:text="Please wait for doctor's confirmation!\n\n
 Thank you for booking appointments with us" />
 
 
@@ -67,7 +69,7 @@ Thank you for booking appointments with us" />
         android:id="@+id/btnHome"
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:layout_marginTop="200sp"
+        android:layout_marginTop="40sp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="#2C87FF"
         android:fontFamily="@font/montserrat"

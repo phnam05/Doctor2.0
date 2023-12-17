@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 public class Doctor  implements Serializable {
 
+    private static final int maleid = R.drawable.male_doctor_icon;
+    private static final int femaleid = R.drawable.female_doctor_icon;
     private String doctorID;
     public int resourceID;
     private String specialty;
@@ -64,10 +66,10 @@ public class Doctor  implements Serializable {
         this.gender = gender;
         this.role = role;
         if (gender.equals("Male")){
-            this.resourceID = R.drawable.male_doctor_icon;
+            this.resourceID = maleid;
         }
         else{
-            this.resourceID = R.drawable.female_doctor_icon;
+            this.resourceID = femaleid;
         }
     }
 
