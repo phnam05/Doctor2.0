@@ -15,7 +15,7 @@
     android:layout_height="wrap_content"
     android:fontFamily="@font/montserrat"
     android:text="APPOINTMENT CONFIRMATION"
-        android:layout_marginTop="30sp"
+        android:layout_marginTop="10sp"
     android:textAlignment="center"
     android:textColor="#2C87FF"
     android:textSize="30sp"
@@ -25,10 +25,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:layout_marginTop="30sp"
+        android:layout_marginTop="50sp"
         android:fontFamily="@font/montserrat"
         android:textStyle="bold"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:gravity="center"
         android:text="Appointment request submitted!" />
 
@@ -42,7 +42,7 @@
         <TextView
             android:id="@+id/tvAppointmentInfo"
             android:layout_width="match_parent"
-            android:textSize="21sp"
+            android:textSize="18sp"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/rounded_button"
             android:drawablePadding="8dp"
@@ -53,11 +53,10 @@
     </RelativeLayout>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop = "200sp"
+        android:layout_marginTop = "210sp"
         android:fontFamily="@font/montserrat"
-        android:textStyle="bold"
         android:textSize="18sp"
         android:gravity="center"
 

@@ -38,10 +38,11 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
     }
 
     static class AppointmentViewHolder extends RecyclerView.ViewHolder {
-        TextView patientName, appointmentDate, appointmentType, appointmentNote, appointmentTime;
+        TextView patientName, appointmentDate, appointmentType, appointmentNote, appointmentTime, emailText;
 
         AppointmentViewHolder(View itemView) {
             super(itemView);
+            emailText = itemView.findViewById(R.id.emailTextView);
             patientName = itemView.findViewById(R.id.tvPatientName);
             appointmentDate = itemView.findViewById(R.id.tvAppointmentDate);
             appointmentType = itemView.findViewById(R.id.tvAppointmentType);
@@ -58,6 +59,7 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
             appointmentType.setText(type);
             String note = "Note: " + appointment.getNote();
             appointmentNote.setText(note);
+            emailText.setText(appointment.getPatientEmail());
             //appointmentTime.setText(note); // If needed separately
         }
     }

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgr_view"
     tools:context=".DoctorViewAppointmentActivity">
 
     <!-- TODO: Update blank fragment layout -->

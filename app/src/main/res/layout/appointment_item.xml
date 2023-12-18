@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:textSize = "16sp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvPatientName"
+            android:layout_below="@id/emailTextView"
             android:layout_marginStart="48dp"
 
             android:layout_marginTop="13dp"
@@ -42,11 +42,22 @@
             android:textSize = "16sp"
             android:textColor="@android:color/black"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvPatientName"
+            android:layout_below="@id/emailTextView"
 
             android:layout_marginTop="13dp"
             android:layout_marginEnd="8dp"
             android:text="Date: " />
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="wrap_content"
+            android:textSize = "16sp"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPatientName"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Email: patient@gmail.com " />
 
         <TextView
             android:textSize = "16sp"

@@ -53,7 +53,7 @@
 
         <EditText
             android:id="@+id/editTextSpecialty"
-            android:layout_width="200sp"
+            android:layout_width="320sp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/fullnameTextView"
             android:layout_marginTop="16sp"
@@ -77,7 +77,7 @@
 
         <EditText
             android:id="@+id/editTextYearsExperience"
-            android:layout_width="200sp"
+            android:layout_width="320sp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/emailTextView"
             android:layout_marginTop="16sp"
@@ -102,7 +102,7 @@
 
         <EditText
             android:id="@+id/editTextNumPatient"
-            android:layout_width="200sp"
+            android:layout_width="320sp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/birthTextView"
             android:layout_marginTop="17dp"
@@ -125,7 +125,7 @@
 
         <EditText
             android:id="@+id/editTextLocation"
-            android:layout_width="200sp"
+            android:layout_width="320sp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/phoneNumberTextView"
             android:layout_marginTop="16sp"
