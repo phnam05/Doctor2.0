@@ -4,4 +4,4 @@ appointments with their selected doctors. Doctors and Nurses can also use this a
 record data about past appointments.
 
 This application is a group work in the Final Project of the course CS207 - Object Oriented Software Design, at Fulbright University Vietnam, Fall 2023 Semester
-nice
+
