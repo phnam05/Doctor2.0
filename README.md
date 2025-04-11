@@ -5,3 +5,4 @@ record data about past appointments.
 
 This application is a group work in the Final Project of the course CS207 - Object Oriented Software Design, at Fulbright University Vietnam, Fall 2023 Semester
 
+For a video demo of the application, please visit this link: https://youtube.com/shorts/p-f_ZaY2yiU
